@@ -7,15 +7,14 @@ import (
 	"testing"
 
 	_ "github.com/lib/pq"
-	"github.com/techschool/simplebank/db/util"
+	"github.com/techschool/simplebank/util"
 )
-
 
 var testQueries *Queries
 var testDB *sql.DB
 
 func TestMain(m *testing.M) {
-	config,err := util.LoadConfig("../..")
+	config, err := util.LoadConfig("../..")
 	if err != nil {
 		log.Fatal("cannot load config:", err)
 	}
